@@ -1,4 +1,58 @@
-.header{
+.inicio {
+  background-image: url("/img/header.jpg");
+}
+
+.header {
     background-color: $grisOscuro;
-    padding: 1rem 0  3rem 0;
+    padding: 1rem 0 3rem 0;
+
+    &.inicio {
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @include tablet { 
+            min-height: 70rem; 
+        }
+        .contenido-header {
+            @include tablet {
+                min-height: 70rem;
+            }
+        }
+    }
+}
+
+
+.contenido-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+     h1{
+        text-align: left;
+        color: $blanco;
+        font-weight: $bold;
+        line-height: 2;
+        max-width: 60rem;
+     }
+
+}
+
+.barra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* separa izquierda y derecha */
+  padding-top: 3rem;
+}
+
+/* Logo */
+.barra img {
+  width: 300px;
+  height: auto;
+}
+
+/* Navegación */
+.navegacion {
+  display: flex;
+  gap: 2rem; /* separación entre links */
 }

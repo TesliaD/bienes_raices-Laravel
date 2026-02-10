@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+@charset "UTF-8";
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -372,9 +373,60 @@ h4 {
 }
 
 /** UI **/
+.inicio {
+  background-image: url("/img/header.jpg");
+}
+
 .header {
   background-color: #333333;
   padding: 1rem 0 3rem 0;
+}
+.header.inicio {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .header.inicio {
+    min-height: 70rem;
+  }
+}
+@media (min-width: 768px) {
+  .header.inicio .contenido-header {
+    min-height: 70rem;
+  }
+}
+
+.contenido-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contenido-header h1 {
+  text-align: left;
+  color: #FFFFFF;
+  font-weight: 700;
+  line-height: 2;
+  max-width: 60rem;
+}
+
+.barra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* separa izquierda y derecha */
+  padding-top: 3rem;
+}
+
+/* Logo */
+.barra img {
+  width: 300px;
+  height: auto;
+}
+
+/* Navegación */
+.navegacion {
+  display: flex;
+  gap: 2rem; /* separación entre links */
 }
 
 .footer {
@@ -421,4 +473,70 @@ h4 {
   .navegacion a:last-of-type {
     margin-right: 0;
   }
+}
+
+@media (min-width: 768px) {
+  .iconos-nosotros {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.icono {
+  text-align: center;
+}
+.icono img {
+  height: 10rem;
+}
+.icono h3 {
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .contenedor-anuncios {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.anuncio {
+  background-color: rgb(237.75, 237.75, 237.75);
+  border: 1px solid rgb(25.5, 25.5, 25.5);
+}
+.anuncio .contenido-anuncio {
+  padding: 2rem;
+}
+.anuncio h3, .anuncio p {
+  margin: #71B100;
+}
+.anuncio .precio {
+  color: #71B100;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.iconos-caracteristicas {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+.iconos-caracteristicas li {
+  flex: 1;
+  display: flex;
+}
+.iconos-caracteristicas li img {
+  flex: 0 0 5rem;
+  margin-right: 1rem;
+}
+.iconos-caracteristicas li p {
+  font-weight: 900;
+}
+
+.boton {
+  display: flex;
+  margin: auto;
+}
+
+.boton-amarillo {
+  background-color: #E08709;
 }
