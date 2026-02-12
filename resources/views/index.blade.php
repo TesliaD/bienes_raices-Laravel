@@ -103,12 +103,88 @@
                         </li>
                     </ul>
 
-                    <a href="{{ route('anuncios') }}" class="boton boton-amarillo">
+                    <a href="{{ route('anuncios') }}" class="boton boton-verde">
                         Ver propiedad
                     </a>
-                </div>
-            </div>
-        </div>
+                </div><!--.contenido-anuncio-->
+            </div><!--anuncio-->
+
+                <div class="anuncio">
+                <picture>
+                    <source srcset="{{ asset('img/anuncio1.webp') }}" type="image/webp">
+                    <source srcset="{{ asset('img/anuncio1.jpg') }}" type="image/jpeg">
+                    <img loading="lazy" src="{{ asset('img/anuncio1.jpg') }}" alt="anuncio">
+                </picture>
+
+                <div class="contenido-anuncio"> <!--Anuncio 1-->
+                    <h3>Casa de Lujo en el lago</h3>
+                    <p>Casa en el lago con excelente vista, acabados de lujo a un excelente</p>
+                    <p class="precio">$3,0000,000</p>
+
+                    <ul class="iconos-caracteristicas">
+                        
+                        <li>
+                            <img loading="lazy" src="img/icono_wc.svg" alt="icono wc">
+                            <p>3</p>
+                        </li>
+                        
+                        <li>
+                            <img loading="lazy" src="img/icono_estacionamiento.svg" alt="icono wc">
+                            <p>3</p>
+                        </li>
+
+                        <li>
+                            <img loading="lazy" src="img/icono_dormitorio.svg" alt="icono wc">
+                            <p>3</p>
+                        </li>
+                    </ul>
+
+                    <a href="{{ route('anuncios') }}" class="boton boton-verde">
+                        Ver propiedad
+                    </a>
+                </div><!--.contenido-anuncio-->
+            </div><!--anuncio-->
+            
+            <div class="anuncio">
+                <picture>
+                    <source srcset="{{ asset('img/anuncio1.webp') }}" type="image/webp">
+                    <source srcset="{{ asset('img/anuncio1.jpg') }}" type="image/jpeg">
+                    <img loading="lazy" src="{{ asset('img/anuncio1.jpg') }}" alt="anuncio">
+                </picture>
+
+                <div class="contenido-anuncio"> <!--Anuncio 1-->
+                    <h3>Casa de Lujo en el lago</h3>
+                    <p>Casa en el lago con excelente vista, acabados de lujo a un excelente</p>
+                    <p class="precio">$3,0000,000</p>
+
+                    <ul class="iconos-caracteristicas">
+                        
+                        <li>
+                            <img loading="lazy" src="img/icono_wc.svg" alt="icono wc">
+                            <p>3</p>
+                        </li>
+                        
+                        <li>
+                            <img loading="lazy" src="img/icono_estacionamiento.svg" alt="icono wc">
+                            <p>3</p>
+                        </li>
+
+                        <li>
+                            <img loading="lazy" src="img/icono_dormitorio.svg" alt="icono wc">
+                            <p>3</p>
+                        </li>
+                    </ul>
+
+                    <a href="{{ route('anuncios') }}" class="boton boton-verde">
+                        Ver propiedad
+                    </a>
+                </div><!--.contenido-anuncio-->
+            </div><!--anuncio-->
+
+
+        </div><!--.contenedor-anuncios-->
+
+        
     </section>
 
     <footer class="footer seccion">

@@ -372,6 +372,28 @@ h4 {
   max-width: 800px;
 }
 
+.boton-amarillo {
+  background-color: #E08709;
+  display: block;
+  color: #FFFFFF;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.boton-verde {
+  background-color: #71B100;
+  display: inline-block;
+  color: #FFFFFF;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
 /** UI **/
 .inicio {
   background-image: url("/img/header.jpg");
@@ -530,13 +552,4 @@ h4 {
 }
 .iconos-caracteristicas li p {
   font-weight: 900;
-}
-
-.boton {
-  display: flex;
-  margin: auto;
-}
-
-.boton-amarillo {
-  background-color: #E08709;
 }
