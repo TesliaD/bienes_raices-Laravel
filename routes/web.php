@@ -17,6 +17,11 @@ Route::get('/anuncios', function () {
     return view('anuncios');
 })->name('anuncios');
 
+//Vista de Anuncio de boton
+Route::get('/anuncio', function () {
+    return view('anuncio');
+})->name('anuncio');
+
 //Vista de Blog
 Route::get('/blog', function () {
     return view('blog');
@@ -26,3 +31,8 @@ Route::get('/blog', function () {
 Route::get('/contacto', function () {
     return view('contacto');
 })->name('contacto');
+
+//Vista de Entrada
+Route::get('/entrada', function () {
+    return view('entrada');
+})->name('entrada');

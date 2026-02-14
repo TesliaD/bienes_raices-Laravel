@@ -9,5 +9,11 @@
 @import 'layout/header';
 @import 'layout/footer';
 @import 'layout/navegacion';
-@import 'layout/iconos.scss';
-@import 'layout/anuncios.scss';
+@import 'layout/iconos';
+@import 'layout/anuncios';
+@import 'layout/contactar';
+@import 'layout/inferior';
+@import 'layout/testimonieales';
+
+/** Paginas Internas **/
+@import 'internas/nosotros';

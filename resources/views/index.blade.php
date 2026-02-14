@@ -26,7 +26,7 @@
         </div>
     </header>
     
-    <main class="contenedor seccion">
+    <main class="contenedor-nosotros">
         <h1>Más Sobre Nosotros</h1>
 
         <div class="iconos-nosotros">
@@ -103,7 +103,7 @@
                         </li>
                     </ul>
 
-                    <a href="{{ route('anuncios') }}" class="boton boton-verde">
+                    <a href="{{ route('anuncios') }}" class="boton-amarillo-block">
                         Ver propiedad
                     </a>
                 </div><!--.contenido-anuncio-->
@@ -111,9 +111,8 @@
 
                 <div class="anuncio">
                 <picture>
-                    <source srcset="{{ asset('img/anuncio1.webp') }}" type="image/webp">
-                    <source srcset="{{ asset('img/anuncio1.jpg') }}" type="image/jpeg">
-                    <img loading="lazy" src="{{ asset('img/anuncio1.jpg') }}" alt="anuncio">
+                    <source srcset="{{ asset('img/anuncio2.jpg') }}" type="image/jpeg">
+                    <img loading="lazy" src="{{ asset('img/anuncio2.jpg') }}" alt="anuncio">
                 </picture>
 
                 <div class="contenido-anuncio"> <!--Anuncio 1-->
@@ -139,7 +138,7 @@
                         </li>
                     </ul>
 
-                    <a href="{{ route('anuncios') }}" class="boton boton-verde">
+                    <a href="{{ route('anuncios') }}" class="boton-amarillo-block">
                         Ver propiedad
                     </a>
                 </div><!--.contenido-anuncio-->
@@ -147,9 +146,8 @@
             
             <div class="anuncio">
                 <picture>
-                    <source srcset="{{ asset('img/anuncio1.webp') }}" type="image/webp">
-                    <source srcset="{{ asset('img/anuncio1.jpg') }}" type="image/jpeg">
-                    <img loading="lazy" src="{{ asset('img/anuncio1.jpg') }}" alt="anuncio">
+                    <source srcset="{{ asset('img/anuncio3.jpg') }}" type="image/jpeg">
+                    <img loading="lazy" src="{{ asset('img/anuncio3.jpg') }}" alt="anuncio">
                 </picture>
 
                 <div class="contenido-anuncio"> <!--Anuncio 1-->
@@ -175,25 +173,88 @@
                         </li>
                     </ul>
 
-                    <a href="{{ route('anuncios') }}" class="boton boton-verde">
+                    <a href="{{ route('anuncios') }}" class="boton-amarillo-block">
                         Ver propiedad
                     </a>
                 </div><!--.contenido-anuncio-->
             </div><!--anuncio-->
 
-
         </div><!--.contenedor-anuncios-->
 
-        
+        <div class="alinear-derecha">
+            <a href="{{ route('anuncios') }}" class="boton-verde">Ver Todas</a>
+        </div>
     </section>
+
+    <section class="imagen-contacto">
+        <h2>Encuentra la casa de tus sueños</h2>
+        <p>Lena el formulario de contacto y un asesor se pondrá en contacto contigo a la brevedad</p>
+        <a href="{{ route('contacto') }}" class="boton-amarillo">Contactános</a>
+    </section>
+
+    <div class="contenedor seccion seccion-inferior">
+        <section class="blog">
+            <h3>Nuestro Blog</h3>
+            <article class="entrada-blog">
+                <div class="imagen">
+                    <picture>
+                        <source srcset="{{ asset('img/blog1.jpg') }}" type="image/jpeg">
+                        <img loading="lazy" src="img/blog1.jpg" alt="Texto Entrada Blog">
+                    </picture>
+                </div>
+
+                <div class="texto-entrada">
+                    <a href="{{ route('entrada') }}">
+                        <h4>Terraza en el techo de tu casa</h4>
+                        <p>Escrito en el: <span>20/10/2021</span>por: <span>Admin</span></p>
+                        <p>
+                            Consejos para contruir una terraza en el techo de tu casa con los mejores
+                            materiales y ahorrando dunero
+                        </p>
+                    </a>
+                </div>   
+            </article>
+
+            <article class="entrada-blog">
+                <div class="imagen">
+                    <picture>
+                        <source srcset="{{ asset('img/blog2.jpg') }}" type="image/jpeg">
+                        <img loading="lazy" src="img/blog2.jpg" alt="Texto Entrada Blog">
+                    </picture>
+                </div>
+
+                <div class="texto-entrada">
+                    <a href="{{ route('entrada') }}">
+                        <h4>Terraza en el techo de tu casa</h4>
+                        <p>Escrito en el: <span>20/10/2021</span>por: <span>Admin</span></p>
+                        <p>
+                            Consejos para contruir una terraza en el techo de tu casa con los mejores
+                            materiales y ahorrando dinero
+                        </p>
+                    </a>
+                </div>                
+            </article>
+        </section>
+
+        <section class="testimoniales">
+            <h3>Testimoniales</h3>
+            <div class="testimonial">
+                <blockquote>
+                        El personal se comportó de una excelente forma, muy buena atención y la casa que me 
+                        ofrecieron cumple con todas mis expectativas.
+                </blockquote>
+                <p>Ian Felix</p>
+            </div>
+        </section>
+    </div>
 
     <footer class="footer seccion">
         <div class="contenedor contenerdor-footer">
                <nav class="navegacion">
-                    <a href="nosotros.html">Nosotros</a>
-                    <a href="anuncios.html">Anuncios</a>
-                    <a href="blog.html">Blog</a>
-                    <a href="contacto.html">Contacto</a>
+                    <a href="{{ route('nosotros') }}">Nosotros</a>
+                    <a href="{{ route('anuncios') }}">Anuncios</a>
+                    <a href="{{ route('blog') }}">Blog</a>
+                    <a href="{{ route('contacto') }}">Contacto</a>
                 </nav>
         </div>
         <p class="copyright">Todos los derechos reservados 2021 &copy;</p>
