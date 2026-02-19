@@ -386,9 +386,12 @@ h4 {
   padding: 1rem 3rem;
   text-align: center;
   margin-top: 2.5rem;
+  display: inline-block;
+  border: none;
 }
 .boton-amarillo:hover {
   background-color: rgb(199.4849785408, 120.2253218884, 8.0150214592);
+  cursor: pointer;
 }
 
 .boton-amarillo-block {
@@ -400,9 +403,12 @@ h4 {
   padding: 1rem 3rem;
   text-align: center;
   margin-top: 2.5rem;
+  display: block;
+  border: none;
 }
 .boton-amarillo-block:hover {
   background-color: rgb(199.4849785408, 120.2253218884, 8.0150214592);
+  cursor: pointer;
 }
 
 .boton-verde {
@@ -414,9 +420,12 @@ h4 {
   padding: 1rem 3rem;
   text-align: center;
   margin-top: 2.5rem;
+  display: inline-block;
+  border: none;
 }
 .boton-verde:hover {
   background-color: rgb(96.7203389831, 151.5, 0);
+  cursor: pointer;
 }
 
 /** UI **/
@@ -492,6 +501,7 @@ h4 {
 .barra {
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding-top: 3rem;
 }
 @media (min-width: 768px) {
@@ -501,10 +511,18 @@ h4 {
   }
 }
 
+.navegacion {
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s ease-in-out, opacity 0.5s linear;
+}
 @media (min-width: 768px) {
   .navegacion {
     display: flex;
     align-items: center;
+    opacity: 1;
+    visibility: visible;
   }
 }
 .navegacion a {
@@ -521,6 +539,21 @@ h4 {
   .navegacion a:last-of-type {
     margin-right: 0;
   }
+}
+
+/**Menu de mobil de tres**/
+@media (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+.mobile-menu img {
+  width: 5rem;
+}
+
+.mostrar {
+  visibility: visible;
+  flex-direction: row;
 }
 
 @media (min-width: 768px) {
@@ -632,6 +665,10 @@ h4 {
   margin-botton: 0;
 }
 
+.informacion-meta span {
+  color: #E08709;
+}
+
 .texto-entrada a {
   color: #000000;
   margin-top: 2rem;
@@ -684,6 +721,43 @@ h4 {
   text-align: right;
   font-weight: 700;
   margin: 0;
+}
+
+.formulario p {
+  font-size: 1.4rem;
+  color: #333333;
+  margin: 2rem 0 0 0;
+}
+.formulario legend {
+  font-size: 2rem;
+  color: #333333;
+}
+.formulario label {
+  font-weight: 700;
+  text-transform: uppercase;
+  display: block;
+}
+.formulario input:not([type=submit]), .formulario textarea, .formulario select {
+  padding: 1rem;
+  display: block;
+  width: 100%;
+  background-color: #FFFFFF;
+  border: 1px solid #e1e1e1;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+.formulario textarea {
+  height: 20rem;
+}
+.formulario .forma-contacto {
+  max-width: 30rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.formulario input[type=radio] {
+  margin: 0;
+  width: auto;
 }
 
 /** Paginas Internas **/

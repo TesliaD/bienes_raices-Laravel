@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bienes Raices</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    
+    <script src="{{ asset('js/app.js') }}" defer></script>
+
 </head>
 <body>
     <header class="header inicio">
@@ -15,6 +16,11 @@
                 <a href="/">
                     <img src="{{ asset('img/logo.svg') }}" alt="Logo">
                 </a>
+
+                <div class="mobile-menu"> <!--Menu de Barras-->
+                    <img src="{{ asset('img/barras.svg') }}" alt="icono menu responsive">
+                </div>
+                
                 <nav class="navegacion">
                     <a href="{{ route('nosotros') }}">Nosotros</a>
                     <a href="{{ route('anuncios') }}">Anuncios</a>
@@ -206,7 +212,7 @@
                 <div class="texto-entrada">
                     <a href="{{ route('entrada') }}">
                         <h4>Terraza en el techo de tu casa</h4>
-                        <p>Escrito en el: <span>20/10/2021</span>por: <span>Admin</span></p>
+                        <p class="informacion-meta">Escrito en el: <span>20/10/2021</span> por: <span>Admin</span></p>
                         <p>
                             Consejos para contruir una terraza en el techo de tu casa con los mejores
                             materiales y ahorrando dunero
@@ -226,7 +232,7 @@
                 <div class="texto-entrada">
                     <a href="{{ route('entrada') }}">
                         <h4>Terraza en el techo de tu casa</h4>
-                        <p>Escrito en el: <span>20/10/2021</span>por: <span>Admin</span></p>
+                        <p class="informacion-meta">Escrito en el: <span>20/10/2021</span> por: <span>Admin</span></p>
                         <p>
                             Consejos para contruir una terraza en el techo de tu casa con los mejores
                             materiales y ahorrando dinero
