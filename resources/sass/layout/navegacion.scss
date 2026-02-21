@@ -1,41 +1,87 @@
+.derecha{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablet{
+        align-items: center;
+        margin-left: auto;
+    }
+
+    .dark-mode-boton{
+        width: 3rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        filter: invert(100%);
+
+        &:hover{
+            cursor: pointer;
+
+
+        }
+
+        @include tablet{
+            margin-top: 0;
+        }
+    }
+
+}  
+
+
 .barra{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 3rem;
     padding-top: 3rem;
+    
     @include tablet{
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
+    }
+}                     
+
+.navegacion{
+    display: flex;
+    flex-direction: column;
+    visibility: hidden; 
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: visibility .3s ease-in-out, opacity 0.5s linear, height 0.5s linear;
+
+    @include tablet{
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        opacity: 1;
+        visibility: visible;
+        max-height: none;
     }
 }
 
-.navegacion{
-    display: flex; 
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility .3s ease-in-out, opacity 0.5s linear;
-    
+
+.navegacion a{
+    color: $blanco;
+    text-decoration: none;
+    font-size: 1.8rem;
+    display: block;
+    text-align: center;
+
     @include tablet{
-        display: flex;
-        align-items: center;
-        opacity: 1;
-        visibility: visible;
-    }
+        margin-right: 2rem;
 
-    a{
-        color: $blanco;
-        text-decoration: none;
-        font-size: 1.8rem;
-        display: block;
-        text-align: center;
-
-        @include tablet{
-            margin-right: 2rem;
-            &:last-of-type{
-                margin-right: 0;
-            }
+        &:last-of-type{
+            margin-right: 0;
         }
     }
+}
+
+.navegacion.mostrar{
+    visibility: visible;
+    opacity: 1;
+    max-height: 30rem;
 }
 
 /**Menu de mobil de tres**/
@@ -46,11 +92,12 @@
 
     img{
         width: 5rem;
-
     }
 }
 
 .mostrar{
     visibility: visible;
-    flex-direction: row;
+    opacity: 1;
+    height: auto;
 }
+

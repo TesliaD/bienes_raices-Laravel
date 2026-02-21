@@ -21,12 +21,15 @@
                     <img src="{{ asset('img/barras.svg') }}" alt="icono menu responsive">
                 </div>
                 
-                <nav class="navegacion">
-                    <a href="{{ route('nosotros') }}">Nosotros</a>
-                    <a href="{{ route('anuncios') }}">Anuncios</a>
-                    <a href="{{ route('blog') }}">Blog</a>
-                    <a href="{{ route('contacto') }}">Contacto</a>
-                </nav>
+                <div class="derecha">
+                    <img class="dark-mode-boton" src="{{ asset('img/dark-mode.svg') }}" alt="Dark Mode"> <!--Boton de Dark Mode-->
+                    <nav class="navegacion">
+                        <a href="{{ route('nosotros') }}">Nosotros</a>
+                        <a href="{{ route('anuncios') }}">Anuncios</a>
+                        <a href="{{ route('blog') }}">Blog</a>
+                        <a href="{{ route('contacto') }}">Contacto</a>
+                    </nav>
+                </div>
             </div> <!--.barra-->
             <h1>Venta de Casas y Departamentos Exclusivos de Lujo</h1>
         </div>
@@ -38,7 +41,7 @@
         <div class="iconos-nosotros">
             <!--ICONO 1-->
             <div class="icono">
-                <img src="{{ asset('img/icono1.svg') }}" alt="Icono seguridad" loading="lazy">
+                <img class="icono" src="{{ asset('img/icono1.svg') }}" alt="Icono seguridad" loading="lazy">
                 <h3>Seguridad</h3>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -94,17 +97,17 @@
                     <ul class="iconos-caracteristicas">
                         
                         <li>
-                            <img loading="lazy" src="img/icono_wc.svg" alt="icono wc">
+                            <img class="icono" loading="lazy" src="img/icono_wc.svg" alt="icono wc">
                             <p>3</p>
                         </li>
                         
                         <li>
-                            <img loading="lazy" src="img/icono_estacionamiento.svg" alt="icono wc">
+                            <img class="icono" loading="lazy" src="img/icono_estacionamiento.svg" alt="icono wc">
                             <p>3</p>
                         </li>
 
                         <li>
-                            <img loading="lazy" src="img/icono_dormitorio.svg" alt="icono wc">
+                            <img class="icono" loading="lazy" src="img/icono_dormitorio.svg" alt="icono wc">
                             <p>3</p>
                         </li>
                     </ul>
@@ -121,7 +124,7 @@
                     <img loading="lazy" src="{{ asset('img/anuncio2.jpg') }}" alt="anuncio">
                 </picture>
 
-                <div class="contenido-anuncio"> <!--Anuncio 1-->
+                <div class="contenido-anuncio"> <!--Anuncio 2-->
                     <h3>Casa de Lujo en el lago</h3>
                     <p>Casa en el lago con excelente vista, acabados de lujo a un excelente</p>
                     <p class="precio">$3,0000,000</p>
@@ -129,17 +132,17 @@
                     <ul class="iconos-caracteristicas">
                         
                         <li>
-                            <img loading="lazy" src="img/icono_wc.svg" alt="icono wc">
+                            <img class="icono" loading="lazy" src="img/icono_wc.svg" alt="icono wc">
                             <p>3</p>
                         </li>
                         
                         <li>
-                            <img loading="lazy" src="img/icono_estacionamiento.svg" alt="icono wc">
+                            <img class="icono" loading="lazy" src="img/icono_estacionamiento.svg" alt="icono wc">
                             <p>3</p>
                         </li>
 
                         <li>
-                            <img loading="lazy" src="img/icono_dormitorio.svg" alt="icono wc">
+                            <img class="icono" loading="lazy" src="img/icono_dormitorio.svg" alt="icono wc">
                             <p>3</p>
                         </li>
                     </ul>
@@ -156,7 +159,7 @@
                     <img loading="lazy" src="{{ asset('img/anuncio3.jpg') }}" alt="anuncio">
                 </picture>
 
-                <div class="contenido-anuncio"> <!--Anuncio 1-->
+                <div class="contenido-anuncio"> <!--Anuncio 3-->
                     <h3>Casa de Lujo en el lago</h3>
                     <p>Casa en el lago con excelente vista, acabados de lujo a un excelente</p>
                     <p class="precio">$3,0000,000</p>
@@ -164,17 +167,17 @@
                     <ul class="iconos-caracteristicas">
                         
                         <li>
-                            <img loading="lazy" src="img/icono_wc.svg" alt="icono wc">
+                            <img class="icono" loading="lazy" src="img/icono_wc.svg" alt="icono wc">
                             <p>3</p>
                         </li>
                         
                         <li>
-                            <img loading="lazy" src="img/icono_estacionamiento.svg" alt="icono wc">
+                            <img class="icono" loading="lazy" src="img/icono_estacionamiento.svg" alt="icono wc">
                             <p>3</p>
                         </li>
 
                         <li>
-                            <img loading="lazy" src="img/icono_dormitorio.svg" alt="icono wc">
+                            <img class="icono" loading="lazy" src="img/icono_dormitorio.svg" alt="icono wc">
                             <p>3</p>
                         </li>
                     </ul>
@@ -255,8 +258,8 @@
     </div>
 
     <footer class="footer seccion">
-        <div class="contenedor contenerdor-footer">
-               <nav class="navegacion">
+        <div class="contenedor  contenido-footer">
+               <nav class="navegacion-footer">
                     <a href="{{ route('nosotros') }}">Nosotros</a>
                     <a href="{{ route('anuncios') }}">Anuncios</a>
                     <a href="{{ route('blog') }}">Blog</a>

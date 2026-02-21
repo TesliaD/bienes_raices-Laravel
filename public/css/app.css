@@ -428,6 +428,26 @@ h4 {
   cursor: pointer;
 }
 
+.dark-mode {
+  background-color: rgb(25.5, 25.5, 25.5);
+}
+.dark-mode p {
+  color: #FFFFFF;
+}
+.dark-mode a, .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4 {
+  color: #e1e1e1;
+}
+.dark-mode .anuncio {
+  background-color: #333333;
+  border: 1px solid #333333;
+}
+.dark-mode .anuncio .precio {
+  color: #71B100;
+}
+.dark-mode .anuncio .icono {
+  filter: invert(100%);
+}
+
 /** UI **/
 .inicio {
   background-image: url("/img/header.jpg");
@@ -490,41 +510,81 @@ h4 {
   background-color: #333333;
   margin-bottom: 0;
 }
-.footer .contenido-footer {
+.footer .contenedor-footer {
   padding-top: 2.5rem;
+}
+.footer .navegacion {
+  visibility: visible;
+  opacity: 1;
+  height: auto;
 }
 .footer .copyright {
   color: #FFFFFF;
   text-align: center;
+  margin-top: 2rem;
+}
+
+.derecha {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .derecha {
+    align-items: center;
+    margin-left: auto;
+  }
+}
+.derecha .dark-mode-boton {
+  width: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  filter: invert(100%);
+}
+.derecha .dark-mode-boton:hover {
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .derecha .dark-mode-boton {
+    margin-top: 0;
+  }
 }
 
 .barra {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 3rem;
   padding-top: 3rem;
 }
 @media (min-width: 768px) {
   .barra {
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   }
 }
 
 .navegacion {
   display: flex;
+  flex-direction: column;
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0.3s ease-in-out, opacity 0.5s linear;
+  height: 0;
+  overflow: hidden;
+  transition: visibility 0.3s ease-in-out, opacity 0.5s linear, height 0.5s linear;
 }
 @media (min-width: 768px) {
   .navegacion {
-    display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: flex-end;
     opacity: 1;
     visibility: visible;
+    max-height: none;
   }
 }
+
 .navegacion a {
   color: #FFFFFF;
   text-decoration: none;
@@ -541,6 +601,12 @@ h4 {
   }
 }
 
+.navegacion.mostrar {
+  visibility: visible;
+  opacity: 1;
+  max-height: 30rem;
+}
+
 /**Menu de mobil de tres**/
 @media (min-width: 768px) {
   .mobile-menu {
@@ -553,7 +619,8 @@ h4 {
 
 .mostrar {
   visibility: visible;
-  flex-direction: row;
+  opacity: 1;
+  height: auto;
 }
 
 @media (min-width: 768px) {
@@ -583,6 +650,7 @@ h4 {
 .anuncio {
   background-color: rgb(237.75, 237.75, 237.75);
   border: 1px solid rgb(25.5, 25.5, 25.5);
+  margin-bottom: 2rem;
 }
 .anuncio .contenido-anuncio {
   padding: 2rem;

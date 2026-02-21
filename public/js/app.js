@@ -9,14 +9,24 @@
 
 document.addEventListener('DOMContentLoaded', function () {
   iniciarApp();
+  darkMode();
 });
 function iniciarApp() {
   var mobileMenu = document.querySelector('.mobile-menu');
-  mobileMenu.addEventListener('click', navegacionResponsive);
+  if (mobileMenu) {
+    mobileMenu.addEventListener('click', navegacionResponsive);
+  }
 }
 function navegacionResponsive() {
   var navegacion = document.querySelector('.navegacion');
   navegacion.classList.toggle('mostrar');
+}
+function darkMode() {
+  var botonDarkMode = document.querySelector('.dark-mode-boton');
+  if (!botonDarkMode) return;
+  botonDarkMode.addEventListener('click', function () {
+    document.body.classList.toggle('dark-mode');
+  });
 }
 
 /***/ },

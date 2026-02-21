@@ -17,14 +17,20 @@
                 <a href="/">
                     <img src="/img/logo.svg" alt="Logotipo de Bienes Raices">
                 </a>
-
-                <!--Barra de Navegación y rutas header-->
-                <nav class="navegacion">
-                    <a href="{{ route('nosotros') }}">Nosotros</a>
-                    <a href="{{ route('anuncios') }}">Anuncios</a>
-                    <a href="{{ route('blog') }}">Blog</a>
-                    <a href="{{ route('contacto') }}">Contacto</a>
-                </nav>
+                
+                <div class="mobile-menu"> <!--Menu de Barras-->
+                    <img src="{{ asset('img/barras.svg') }}" alt="icono menu responsive">
+                </div>
+                
+                <div class="derecha">
+                    <img class="dark-mode-boton" src="{{ asset('img/dark-mode.svg') }}" alt="Dark Mode"> <!--Boton de Dark Mode-->
+                    <nav class="navegacion">
+                        <a href="{{ route('nosotros') }}">Nosotros</a>
+                        <a href="{{ route('anuncios') }}">Anuncios</a>
+                        <a href="{{ route('blog') }}">Blog</a>
+                        <a href="{{ route('contacto') }}">Contacto</a>
+                    </nav>
+                </div>
             </div> <!--.barra-->
         </div>
     </header>
